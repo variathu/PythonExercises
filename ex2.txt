@@ -1,0 +1,103 @@
+Write a function translate() that will translate a text into "rövarspråket" (Swedish for "robber's language"). That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
+
+def translate(x):
+    s = ""
+    for i in x:
+        if i not in ('aeiou'):
+            s += i + "o" + i
+        else:
+            s += i 
+    print s 
+    
+translate("this is fun")
+
+
+Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in a list of numbers. For example, sum([1, 2, 3, 4]) should return 10, and multiply([1, 2, 3, 4]) should return 24
+
+def summ(x):
+    c=0
+    for i in x:
+        c += i 
+    return c
+print summ([1, 2, 3, 4])
+
+def multiply(x):
+    c=1
+    for i in x:
+        c *= i 
+    return c
+print multiply([1, 2, 3, 4])
+
+
+Define a function reverse() that computes the reversal of a string. For example, reverse("I am testing") should return the string "gnitset ma I
+
+def reverse(x):
+    new =[]
+    for i in range(len(x))[::-1]:
+        new.append(x[i])
+    print "".join(new)
+reverse("I am testing")
+
+
+Define a function is_palindrome() that recognizes palindromes (i.e. words that look the same written backwards). For example, is_palindrome("radar") should return True.
+
+def is_palindrome(x):
+    if x == x[::-1]:
+        print True
+    else:
+        print False   
+is_palindrome("radar")
+
+
+Write a function is_member() that takes a value (i.e. a number, string, etc) x and a list of values a, and returns True if x is a member of a, False otherwise.
+
+
+
+Define a function overlapping() that takes two lists and returns True if they have at least one member in common, False otherwise. You may use your is_member() function, or the in operator, but for the sake of the exercise, you should (also) write it using two nested for-loops.
+
+
+
+Define a procedure histogram() that takes a list of integers and prints a histogram to the screen. For example, histogram([4, 9, 7]) should print the following:(click on next cell to see)
+
+
+
+Write a function char_freq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Python dictionary. Try it with something like char_freq("abbabcbdbabdbdbabababcbcbab").
+
+
+
+A certain childrens game involves starting with a word in a particular category. Each participant in turn says a word, but that word must begin with the final letter of the previous word. Once a word has been given, it cannot be repeated. If an opponent cannot give a word in the category, they fall out of the game. For example, with "animals" as the category,
+Child 1: dog 
+Child 2: goldfish
+Child 1: hippopotamus
+Child 2: snake
+...
+Your task in this exercise is as follows: Take the following selection of 70 English Pokemon names (extracted from Wikipedia's list of Pokemon) and generate the/a sequence with the highest possible number of Pokemon names where the subsequent name starts with the final letter of the preceding name. No Pokemon name is to be repeated.
+**audino bagon baltoy banette bidoof braviary bronzor carracosta charmeleon
+cresselia croagunk darmanitan deino emboar emolga exeggcute gabite
+girafarig gulpin haxorus heatmor heatran ivysaur jellicent jumpluff kangaskhan
+kricketune landorus ledyba loudred lumineon lunatone machamp magnezone mamoswine
+nosepass petilil pidgeotto pikachu pinsir poliwrath poochyena porygon2
+porygonz registeel relicanth remoraid rufflet sableye scolipede scrafty seaking
+sealeo silcoon simisear snivy snorlax spoink starly tirtouga trapinch treecko
+tyrogue vigoroth vulpix wailord wartortle whismur wingull yamask**
+
+
+
+**Write a program able to play the "Guess the number"-game, where the number to be guessed is randomly chosen between 1 and 20. (Source: http://inventwithpython.com) This is how it should work when run in a terminal:
+
+Hello! What is your name?
+Torbjörn
+Well, Torbjörn, I am thinking of a number between 1 and 20.
+Take a guess.
+10
+Your guess is too low.
+Take a guess.
+15
+Your guess is too low.
+Take a guess.
+18
+Good job, Torbjörn! You guessed my number in 3 guesses!***
+
+
+
+Write a program that maps a list of words into a list of integers representing the lengths of the correponding words.
